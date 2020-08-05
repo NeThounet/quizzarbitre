@@ -4,6 +4,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import AnswerOption from '../components/AnswerOption';
 import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
+import { Button, Icon } from 'semantic-ui-react';
 
 
 
@@ -25,22 +26,31 @@ function Result(props) {
   }
 
   return (
-    <CSSTransitionGroup
-      className="container"
-      component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
-    >
-      <div>
-        <QuestionCount counter={props.questionNumero} />
-        <Question content={props.question} />
-        {props.answerOptions.map(renderAnswerOptions)}
-        {props.isQuestion === "false" && <button name="button" onClick={props.onHandleClickNext}>Question suivante</button>}
+    <div>
+      <CSSTransitionGroup
+        className="container"
+        component="div"
+        transitionName="fade"
+        transitionEnterTimeout={800}
+        transitionLeaveTimeout={500}
+        transitionAppear
+        transitionAppearTimeout={500}
+      >
+        <div>
+          <QuestionCount counter={props.questionNumero} />
+          <Question content={props.question} />
+          {props.answerOptions.map(renderAnswerOptions)}
+        </div>
+      </CSSTransitionGroup>
+      <div className="DivButton">
+        {props.isQuestion === "false" && <Button className="NextButton" onClick={props.onHandleClickNext} animated>
+          <Button.Content visible>Question suivante</Button.Content>
+          <Button.Content hidden>
+            <Icon name='arrow right' />
+          </Button.Content>
+        </Button>}
       </div>
-    </CSSTransitionGroup>
+    </div>
   );
 }
 

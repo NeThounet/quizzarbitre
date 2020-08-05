@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #0300ac;
   padding: 20px;
   color: white;
   text-align: center;
@@ -12,16 +12,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-.No {
-  color: red;
-  font-weight: bold;
-}
-
-.Yes {
-  color: green;
-  font-weight: bold;
 }
 
 @keyframes spin {
@@ -32,3 +22,4 @@
     transform: rotate(360deg);
   }
 }
+

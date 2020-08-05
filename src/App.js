@@ -62,7 +62,7 @@ class App extends Component {
   }
 
   handleClickNext(event) {
-    setTimeout(() => this.setNextQuestion(), 300);
+    setTimeout(() => this.setNextQuestion(), 0);
     this.setState((state, props) => ({
       isQuestion: "true"
     }));
