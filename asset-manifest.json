@@ -1,15 +1,14 @@
 {
-  "main.css": "/quizzarbitre/static/css/main.24003d70.chunk.css",
-  "main.js": "/quizzarbitre/static/js/main.59287065.chunk.js",
-  "main.js.map": "/quizzarbitre/static/js/main.59287065.chunk.js.map",
-  "static/js/1.2c0afdcb.chunk.js": "/quizzarbitre/static/js/1.2c0afdcb.chunk.js",
-  "static/js/1.2c0afdcb.chunk.js.map": "/quizzarbitre/static/js/1.2c0afdcb.chunk.js.map",
+  "main.css": "/quizzarbitre/static/css/main.62ae89a8.chunk.css",
+  "main.js": "/quizzarbitre/static/js/main.4494ae3d.chunk.js",
+  "main.js.map": "/quizzarbitre/static/js/main.4494ae3d.chunk.js.map",
+  "static/js/1.e73c0442.chunk.js": "/quizzarbitre/static/js/1.e73c0442.chunk.js",
+  "static/js/1.e73c0442.chunk.js.map": "/quizzarbitre/static/js/1.e73c0442.chunk.js.map",
   "runtime~main.js": "/quizzarbitre/static/js/runtime~main.2f4b8d23.js",
   "runtime~main.js.map": "/quizzarbitre/static/js/runtime~main.2f4b8d23.js.map",
   "static/media/index.css": "/quizzarbitre/static/media/icon-check.b4084e44.svg",
-  "static/media/logo.svg": "/quizzarbitre/static/media/logo.05a3e30f.svg",
-  "static/css/main.24003d70.chunk.css.map": "/quizzarbitre/static/css/main.24003d70.chunk.css.map",
+  "static/css/main.62ae89a8.chunk.css.map": "/quizzarbitre/static/css/main.62ae89a8.chunk.css.map",
   "index.html": "/quizzarbitre/index.html",
-  "precache-manifest.e67bfe83cf9d275d94de067c8fc8be3c.js": "/quizzarbitre/precache-manifest.e67bfe83cf9d275d94de067c8fc8be3c.js",
+  "precache-manifest.4296af89e5bfac22f213e0e0b744105d.js": "/quizzarbitre/precache-manifest.4296af89e5bfac22f213e0e0b744105d.js",
   "service-worker.js": "/quizzarbitre/service-worker.js"
 }
