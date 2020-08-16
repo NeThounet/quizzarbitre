@@ -20,8 +20,8 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {},
-      result: [],
-      fail: [],
+      result: ["N° des questions réussies"],
+      fail: ["N° des questions ratées"],
       categorylist: []
     };
 
@@ -160,7 +160,7 @@ class App extends Component {
 
   renderListOfWin(key) {
     return (
-      <p>{key}</p>
+      <p className="ListItem">{key}</p>
     );
   }
 
@@ -195,7 +195,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Quizz arbitre district de la gironde, évalbox LFNA</h2>
         </div>
-        <Popup flowing hoverable className="param" content={this.state.categorylist.map((x, index) => this.renderCategory(x, index))} trigger={<Button icon='add' />} />
+        <Popup flowing hoverable className="CatPopup" content={this.state.categorylist.map((x, index) => this.renderCategory(x, index))} trigger={<Button icon='add' />} />
         <div className="Package">
           <ul className="List">{this.state.result.map(this.renderListOfWin)}</ul>
           {this.renderResult()}

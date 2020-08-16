@@ -34,7 +34,7 @@ body {
 
 @media (min-width: 769px) {
   .container {
-    margin: 2.5rem auto;
+    margin-top: 2.5rem;
   }
 }
 
@@ -161,13 +161,58 @@ body {
 .DivButton{
   justify-content: center;
   display: flex;
+  padding-top: 2.5rem;
 }
 
 .Package{
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
 }
 
 .List{
   margin: 2.5rem auto;
+}
+
+.Category{
+  padding : 0;
+  margin-top: 0;
+}
+
+.catLabel{
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+.ui.popup{
+  width:auto;
+  height: auto;
+  white-space:nowrap;
+}
+
+.divCat{
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.CatPopup{
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.ListItem{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  margin : 0;
+}
+
+.List{
+  flex-direction: row;
+  width: 10%;
+  background-color: #ffffff;
+  margin-top : 2.5rem;
+  margin-bottom : 0;
+  padding: 0;
+  border-radius: 5px;
 }

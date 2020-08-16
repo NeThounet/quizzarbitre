@@ -15,7 +15,7 @@ function AnswerOption(props) {
                 id={props.id}
                 onClick={props.onClick}
             />
-            <label className="">
+            <label className="catLabel">
                 {props.category}
             </label>
         </div>
