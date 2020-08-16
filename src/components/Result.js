@@ -56,7 +56,7 @@ function Result(props) {
 
 Result.propTypes = {
   isQuestion: PropTypes.string.isRequired,
-  questionNumero: PropTypes.string.isRequired,
+  questionNumero: PropTypes.number.isRequired,
   answer: PropTypes.string.isRequired,
   answerOptions: PropTypes.array.isRequired,
   question: PropTypes.string.isRequired,

@@ -163,3 +163,11 @@ body {
   display: flex;
 }
 
+.Package{
+  justify-content: center;
+  display: flex;
+}
+
+.List{
+  margin: 2.5rem auto;
+}

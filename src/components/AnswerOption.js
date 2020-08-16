@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//    <li className={props.answerType === props.answer && props.answerType !== "Yes" ? "answerOptions + No" : "answerOptions"}>
-
 
 function AnswerOption(props) {
   return (

@@ -1,6 +1,7 @@
 var quizQuestions = [
     {
         numero: 1.1,
+        category: "Loi 1",
         question: "Selon la procédure de remplacement, un joueur amené à être remplacé quitte Ce terrain",
         answers: [
             {
@@ -23,6 +24,7 @@ var quizQuestions = [
     },
     {
         numero: 1.2,
+        category: "Loi 1",
         question: "Dans quel cas un officiel d'équipe se verra infliger une mise en garde (rappel à l'ordre) et non un avertissement ?",
         answers: [
             {
@@ -45,6 +47,7 @@ var quizQuestions = [
     },
     {
         numero: 1.3,
+        category: "Loi 12",
         question: "L'arbitre s'aperçoit qu'un joueur est au sol et arrête immédiatement le jeu alors que le ballon se trouve dans une des surfaces de réparation. Quelle sera la reprise du jeu ?",
         answers: [
             {
@@ -67,6 +70,7 @@ var quizQuestions = [
     },
     {
         numero: 1.4,
+        category: "Loi 13",
         question: "Il y a, en général, faute de main si un joueur touche le ballon du bras ou de la main :",
         answers: [
             {
@@ -89,6 +93,7 @@ var quizQuestions = [
     },
     {
         numero: 1.6,
+        category: "Loi 14",
         question: "Selon la Loi 9. quelle affirmation est fausse ? Une balle à terre ne sera pas accordé quand l'arbitre touche le ballon et :",
         answers: [
             {
@@ -111,6 +116,7 @@ var quizQuestions = [
     },
     {
         numero: 1.7,
+        category: "Loi 3",
         question: "Un joueur a besoin de soins sur le terrain. Dans quel cas le joueur peut-il rester sur le terrain ?",
         answers: [
             {
@@ -133,6 +139,7 @@ var quizQuestions = [
     },
     {
         numero: 1.8,
+        category: "Loi 10",
         question: "A quelle distance doit se trouver les autres joueurs lors d'une balle à terre ?",
         answers: [
             {
