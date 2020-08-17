@@ -19,14 +19,14 @@ function Result(props) {
           answerContent={key.content}
           answerType={key.type}
           answer={props.answer}
-          questionId={props.questionId}
+          category={props.category}
           onAnswerSelected={props.onAnswerSelected}
         /></ul>
     );
   }
 
   return (
-    <div>
+    <div className="quizzSection">
       <CSSTransitionGroup
         className="container"
         component="div"
@@ -60,7 +60,7 @@ Result.propTypes = {
   answer: PropTypes.string.isRequired,
   answerOptions: PropTypes.array.isRequired,
   question: PropTypes.string.isRequired,
-  questionId: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
   questionTotal: PropTypes.number.isRequired,
   onAnswerSelected: PropTypes.func.isRequired,
   onHandleClickNext: PropTypes.func.isRequired

@@ -15,11 +15,12 @@ class App extends Component {
       isQuestion: true,
       counter: 0,
       questionNumero: 0,
-      questionId: 1,
+      category: -1,
       question: '',
       answerOptions: [],
       answer: '',
       answersCount: {},
+      loiresult: [],
       result: ["N° des questions réussies"],
       fail: ["N° des questions ratées"],
       categorylist: []
@@ -38,12 +39,23 @@ class App extends Component {
       this.shuffleArray(question.answers)
     );
     var category = this.getCategory();
+    var initresult = this.initresult()
     this.setState({
+      category: quizQuestions[0].category,
       question: quizQuestions[0].question,
       questionNumero: quizQuestions[0].numero,
       answerOptions: shuffledAnswerOptions[0],
-      categorylist: category
+      categorylist: category,
+      loiresult: initresult
     });
+  }
+
+  initresult() {
+    var mytab = [];
+    for (var i = 1; i <= 17; i++) {
+      mytab.push({ win: 0, lose: 0 });
+    }
+    return mytab;
   }
 
   getCategory() {
@@ -82,8 +94,8 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
-    //console.log(event.currentTarget.value);
-    this.setUserAnswer(event.currentTarget.value);
+    console.log(event.currentTarget.value);
+    this.setUserAnswer(event.currentTarget);
     //setTimeout(() => this.setResults(this.getResults()), 300);
   }
 
@@ -110,15 +122,23 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
-    if (answer === this.getGoodAnswer(this.state.answerOptions)) {
+    if (answer.id === this.getGoodAnswer(this.state.answerOptions)) {
+      var tab = this.state.loiresult;
+      console.log(answer);
+      tab[answer.value].win = tab[answer.value].win + 1;
       this.setState((state, props) => ({
-        answer: answer,
+        loiresult: tab,
+        answer: answer.id,
         isQuestion: "false",
         result: [...this.state.result, this.state.questionNumero]
       }));
     } else {
+      console.log(answer);
+      tab = this.state.loiresult;
+      tab[answer.value].lose = tab[answer.value].lose + 1;
       this.setState((state, props) => ({
-        answer: answer,
+        loiresult: tab,
+        answer: answer.id,
         isQuestion: "false",
         fail: [...this.state.fail, this.state.questionNumero]
       }));
@@ -137,11 +157,11 @@ class App extends Component {
     });
 
     const counter = Math.floor(Math.random() * arr.length);
-    const questionId = this.state.questionId + 1;
+    console.log(arr);
 
     this.setState({
       counter: counter,
-      questionId: questionId,
+      category: arr[counter].category,
       question: arr[counter].question,
       answerOptions: arr[counter].answers,
       answer: '',
@@ -158,9 +178,19 @@ class App extends Component {
     this.setState({ result: getResults });
   }
 
-  renderListOfWin(key) {
+  renderListOfWin(key, index) {
     return (
-      <p className="ListItem">{key}</p>
+      <div className="BoxC">
+        <h4 className="NumLoi">{"Loi " + Number(index + 1)}</h4>
+        <div className="BoxL">
+          <h5 className="ListItem Border">Bon</h5>
+          <h5 className="ListItem">Mauvais</h5>
+        </div>
+        <div className="BoxL">
+          <label className="ListItem Border">{key.win}</label>
+          <label className="ListItem">{key.lose}</label>
+        </div>
+      </div>
     );
   }
 
@@ -169,7 +199,7 @@ class App extends Component {
       answer={this.state.answer}
       questionNumero={this.state.questionNumero}
       answerOptions={this.state.answerOptions}
-      questionId={this.state.questionId}
+      category={this.state.category}
       question={this.state.question}
       questionTotal={quizQuestions.length}
       onAnswerSelected={this.handleAnswerSelected}
@@ -181,7 +211,7 @@ class App extends Component {
     return (
       <ul className="Category">
         <Category
-          category={key.category}
+          category={"Loi " + key.category}
           id={index}
           checked={key.checked}
           onClick={this.handleCatagoriesSelected}
@@ -197,9 +227,8 @@ class App extends Component {
         </div>
         <Popup flowing hoverable className="CatPopup" content={this.state.categorylist.map((x, index) => this.renderCategory(x, index))} trigger={<Button icon='add' />} />
         <div className="Package">
-          <ul className="List">{this.state.result.map(this.renderListOfWin)}</ul>
           {this.renderResult()}
-          <ul className="List">{this.state.fail.map(this.renderListOfWin)}</ul>
+          <div className="List">{this.state.loiresult.map((x, index) => this.renderListOfWin(x, index))}</div>
         </div>
       </div>
     );

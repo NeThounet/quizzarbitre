@@ -11,7 +11,8 @@ function AnswerOption(props) {
         name="radioGroup"
         checked={props.answerType === props.answer}
         id={props.answerType}
-        value={props.answerType}
+        value={props.category}
+        category={props.category}
         disabled={props.answer}
         onChange={props.onAnswerSelected}
       />
@@ -25,6 +26,7 @@ function AnswerOption(props) {
 AnswerOption.propTypes = {
   isQuestion: PropTypes.string.isRequired,
   answerType: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
   onAnswerSelected: PropTypes.func.isRequired

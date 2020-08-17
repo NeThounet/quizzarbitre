@@ -165,13 +165,12 @@ body {
 }
 
 .Package{
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: 0 0;
   display: flex;
 }
 
-.List{
-  margin: 2.5rem auto;
-}
+
 
 .Category{
   padding : 0;
@@ -202,17 +201,54 @@ body {
 .ListItem{
   padding-bottom: 10px;
   padding-top: 10px;
-  border-bottom: 1px solid #eee;
   text-align: center;
   margin : 0;
+  width:50%;
+}
+
+.NumLoi{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  margin : 0;
+  width:100%;
+  border-bottom: 1px solid #eee;
 }
 
 .List{
+  width: 30%; 
   flex-direction: row;
-  width: 10%;
+  flex-wrap:wrap;
+  display: flex;
   background-color: #ffffff;
-  margin-top : 2.5rem;
-  margin-bottom : 0;
+  margin: 2.5rem 0;
   padding: 0;
   border-radius: 5px;
+}
+
+.BoxL{
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  margin : 0;
+  border-bottom: 1px solid #eee;
+}
+
+.BoxC{
+  margin : 0;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+  width: 25%;
+  border-right: 1px solid #eee;
+}
+
+.Border{
+  border-right: 1px solid #eee;
+}
+
+.quizzSection{
+  margin: 0 0;
 }
