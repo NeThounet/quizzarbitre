@@ -52,7 +52,7 @@ class App extends Component {
 
   initresult() {
     var mytab = [];
-    for (var i = 1; i <= 17; i++) {
+    for (var i = 0; i <= 17; i++) {
       mytab.push({ win: 0, lose: 0 });
     }
     return mytab;
@@ -126,6 +126,7 @@ class App extends Component {
       var tab = this.state.loiresult;
       console.log(answer);
       tab[answer.value].win = tab[answer.value].win + 1;
+      tab[0].win = tab[0].win + 1;
       this.setState((state, props) => ({
         loiresult: tab,
         answer: answer.id,
@@ -136,6 +137,7 @@ class App extends Component {
       console.log(answer);
       tab = this.state.loiresult;
       tab[answer.value].lose = tab[answer.value].lose + 1;
+      tab[0].lose = tab[0].lose + 1;
       this.setState((state, props) => ({
         loiresult: tab,
         answer: answer.id,
@@ -181,14 +183,14 @@ class App extends Component {
   renderListOfWin(key, index) {
     return (
       <div className="BoxC">
-        <h4 className="NumLoi">{"Loi " + Number(index + 1)}</h4>
+        <h4 className="NumLoi">{index === 0 ? "Total" : "Loi " + index}</h4>
         <div className="BoxL">
-          <h5 className="ListItem Border">Bon</h5>
-          <h5 className="ListItem">Mauvais</h5>
+          <span role="img" className="ListItem Border emojiV">0</span>
+          <span role="img" className="ListItem emojiX">0</span>
         </div>
         <div className="BoxL">
-          <label className="ListItem Border">{key.win}</label>
-          <label className="ListItem">{key.lose}</label>
+          <label className="ListItem Border Yes">{key.win}</label>
+          <label className="ListItem No">{key.lose}</label>
         </div>
       </div>
     );

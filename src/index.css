@@ -34,7 +34,7 @@ body {
 
 @media (min-width: 769px) {
   .container {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -161,7 +161,7 @@ body {
 .DivButton{
   justify-content: center;
   display: flex;
-  padding-top: 2.5rem;
+  padding-top: 1rem;
 }
 
 .Package{
@@ -221,7 +221,7 @@ body {
   flex-wrap:wrap;
   display: flex;
   background-color: #ffffff;
-  margin: 2.5rem 0;
+  margin: 1rem 0;
   padding: 0;
   border-radius: 5px;
 }
@@ -251,4 +251,20 @@ body {
 
 .quizzSection{
   margin: 0 0;
+}
+
+.emojiV{
+  background-image : url("./img/V.png");
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: rgba(0,0,0,0);
+}
+
+.emojiX{
+  background-image : url("./img/X.png");
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: rgba(0,0,0,0);
 }
