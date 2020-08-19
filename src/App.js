@@ -182,7 +182,7 @@ class App extends Component {
 
   renderListOfWin(key, index) {
     return (
-      <div className="BoxC">
+      <div className={index % 4 !== 3 ? (index >= 4 ? "BorderRight BoxC BorderTop" : "BoxC BorderRight") : (index >= 4 ? "BoxC BorderTop  " : "BoxC ")}>
         <h4 className="NumLoi">{index === 0 ? "Total" : "Loi " + index}</h4>
         <div className="BoxL">
           <span role="img" className="ListItem Border emojiV">0</span>
@@ -227,7 +227,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Quizz arbitre district de la gironde, évalbox LFNA</h2>
         </div>
-        <Popup flowing hoverable className="CatPopup" content={this.state.categorylist.map((x, index) => this.renderCategory(x, index))} trigger={<Button icon='add' />} />
+        <Popup flowing hoverable className="CatPopup" content={this.state.categorylist.map((x, index) => this.renderCategory(x, index))} trigger={<Button icon='add' className="CatPopup" />} />
         <div className="Package">
           {this.renderResult()}
           <div className="List">{this.state.loiresult.map((x, index) => this.renderListOfWin(x, index))}</div>

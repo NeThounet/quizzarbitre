@@ -194,8 +194,7 @@ body {
 }
 
 .CatPopup{
-  padding-top: 0!important;
-  padding-bottom: 0!important;
+  display:inline-block;text-align:left;float:left;
 }
 
 .ListItem{
@@ -242,7 +241,14 @@ body {
   justify-content: space-around;
   display: flex;
   width: 25%;
-  border-right: 1px solid #eee;
+}
+
+.BorderRight{
+  border-right: 2px solid #686868;  
+}
+
+.BorderTop{
+  border-top: 2px solid #686868;
 }
 
 .Border{
