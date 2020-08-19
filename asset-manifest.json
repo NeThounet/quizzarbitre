@@ -1,14 +1,14 @@
 {
-  "main.css": "/quizzarbitre/static/css/main.52ba19f3.chunk.css",
-  "main.js": "/quizzarbitre/static/js/main.708a27a5.chunk.js",
-  "main.js.map": "/quizzarbitre/static/js/main.708a27a5.chunk.js.map",
+  "main.css": "/quizzarbitre/static/css/main.bfbc915d.chunk.css",
+  "main.js": "/quizzarbitre/static/js/main.723e0a04.chunk.js",
+  "main.js.map": "/quizzarbitre/static/js/main.723e0a04.chunk.js.map",
   "static/js/1.e73c0442.chunk.js": "/quizzarbitre/static/js/1.e73c0442.chunk.js",
   "static/js/1.e73c0442.chunk.js.map": "/quizzarbitre/static/js/1.e73c0442.chunk.js.map",
   "runtime~main.js": "/quizzarbitre/static/js/runtime~main.2f4b8d23.js",
   "runtime~main.js.map": "/quizzarbitre/static/js/runtime~main.2f4b8d23.js.map",
   "static/media/index.css": "/quizzarbitre/static/media/icon-check.b4084e44.svg",
-  "static/css/main.52ba19f3.chunk.css.map": "/quizzarbitre/static/css/main.52ba19f3.chunk.css.map",
+  "static/css/main.bfbc915d.chunk.css.map": "/quizzarbitre/static/css/main.bfbc915d.chunk.css.map",
   "index.html": "/quizzarbitre/index.html",
-  "precache-manifest.570ce133644b62c8f7ad3b846921f996.js": "/quizzarbitre/precache-manifest.570ce133644b62c8f7ad3b846921f996.js",
+  "precache-manifest.cb4aff2cdc4d80faf3295e170ab2fe22.js": "/quizzarbitre/precache-manifest.cb4aff2cdc4d80faf3295e170ab2fe22.js",
   "service-worker.js": "/quizzarbitre/service-worker.js"
 }
