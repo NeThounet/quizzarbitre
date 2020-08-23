@@ -1,7 +1,8 @@
 var quizQuestions = [
     {
-        numero: 1.1,
+        numero: "Evalbox 1.1",
         category: "1",
+        type: "Fermee",
         question: "Selon la procédure de remplacement, un joueur amené à être remplacé quitte Ce terrain",
         answers: [
             {
@@ -23,8 +24,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.2,
+        numero: "Evalbox 1.2",
         category: "1",
+        type: "Fermee",
         question: "Dans quel cas un officiel d'équipe se verra infliger une mise en garde (rappel à l'ordre) et non un avertissement ?",
         answers: [
             {
@@ -46,8 +48,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.3,
+        numero: "Evalbox 1.3",
         category: "12",
+        type: "Fermee",
         question: "L'arbitre s'aperçoit qu'un joueur est au sol et arrête immédiatement le jeu alors que le ballon se trouve dans une des surfaces de réparation. Quelle sera la reprise du jeu ?",
         answers: [
             {
@@ -69,8 +72,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.4,
+        numero: "Evalbox 1.4",
         category: "13",
+        type: "Fermee",
         question: "Il y a, en général, faute de main si un joueur touche le ballon du bras ou de la main :",
         answers: [
             {
@@ -92,8 +96,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.6,
+        numero: "Evalbox 1.6",
         category: "14",
+        type: "Fermee",
         question: "Selon la Loi 9. quelle affirmation est fausse ? Une balle à terre ne sera pas accordé quand l'arbitre touche le ballon et :",
         answers: [
             {
@@ -115,8 +120,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.7,
+        numero: "Evalbox 1.7",
         category: "3",
+        type: "Fermee",
         question: "Un joueur a besoin de soins sur le terrain. Dans quel cas le joueur peut-il rester sur le terrain ?",
         answers: [
             {
@@ -138,8 +144,9 @@ var quizQuestions = [
         ]
     },
     {
-        numero: 1.8,
+        numero: "Evalbox 1.8",
         category: "10",
+        type: "Fermee",
         question: "A quelle distance doit se trouver les autres joueurs lors d'une balle à terre ?",
         answers: [
             {
@@ -159,6 +166,13 @@ var quizQuestions = [
                 content: "A au moins 9,15 mètres du ballon"
             }
         ]
+    },
+    {
+        numero: "Question ouverte 1",
+        category: "11",
+        question: "Quelle est la définition du hors jeu",
+        type: "Ouverte",
+        answers: [{ content: "Un joueur se trouve en position de hors-jeu si n'importe quelle partie de sa tête, de son tronc ou de ses jambes est dans la moitié de terrain adverse (ligne médiane non comprise) et plus près de la ligne de but adverse que le ballon et l'avant-dernier adversaire." }]
     }
 ];
 

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 
 
-function AnswerOption(props) {
+function Category(props) {
     return (
-        <div className="divCat">
+        <div className={props.id !== 0 ? "divCat" : ""}>
             <input
                 type="Checkbox"
-                className=""
+                className={props.id}
                 name="radioGroup"
                 value={props.category}
                 checked={props.checked}
@@ -22,11 +22,11 @@ function AnswerOption(props) {
     );
 }
 
-AnswerOption.propTypes = {
+Category.propTypes = {
     category: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     checked: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
 
-export default AnswerOption;
+export default Category;

@@ -16,6 +16,7 @@ class App extends Component {
       counter: 0,
       questionNumero: 0,
       category: -1,
+      type: '',
       question: '',
       answerOptions: [],
       answer: '',
@@ -31,7 +32,10 @@ class App extends Component {
     this.handleClickNext = this.handleClickNext.bind(this);
     this.renderListOfWin = this.renderListOfWin.bind(this);
     this.renderCategory = this.renderCategory.bind(this);
+    this.handleCorrection = this.handleCorrection.bind(this);
+    this.handleAutoCorrection = this.handleAutoCorrection.bind(this);
   }
+
 
   componentDidMount() {
 
@@ -41,6 +45,7 @@ class App extends Component {
     var category = this.getCategory();
     var initresult = this.initresult()
     this.setState({
+      type: quizQuestions[0].type,
       category: quizQuestions[0].category,
       question: quizQuestions[0].question,
       questionNumero: quizQuestions[0].numero,
@@ -77,6 +82,7 @@ class App extends Component {
     var currentIndex = array.length,
       temporaryValue,
       randomIndex;
+    console.log(currentIndex);
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -94,9 +100,13 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
-    console.log(event.currentTarget.value);
+    console.log(event.currentTarget);
     this.setUserAnswer(event.currentTarget);
-    //setTimeout(() => this.setResults(this.getResults()), 300);
+  }
+
+  handleAutoCorrection(event) {
+    this.handleAnswerSelected(event);
+    this.handleClickNext(event);
   }
 
   handleCatagoriesSelected(event) {
@@ -104,6 +114,12 @@ class App extends Component {
     tab[event.currentTarget.id].checked = (tab[event.currentTarget.id].checked + 1) % 2;
     this.setState((state, props) => ({
       categorylist: tab
+    }));
+  }
+
+  handleCorrection(event) {
+    this.setState((state, props) => ({
+      isQuestion: "false"
     }));
   }
 
@@ -122,9 +138,8 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
-    if (answer.id === this.getGoodAnswer(this.state.answerOptions)) {
+    if (answer.id === "Yes") {
       var tab = this.state.loiresult;
-      console.log(answer);
       tab[answer.value].win = tab[answer.value].win + 1;
       tab[0].win = tab[0].win + 1;
       this.setState((state, props) => ({
@@ -134,7 +149,6 @@ class App extends Component {
         result: [...this.state.result, this.state.questionNumero]
       }));
     } else {
-      console.log(answer);
       tab = this.state.loiresult;
       tab[answer.value].lose = tab[answer.value].lose + 1;
       tab[0].lose = tab[0].lose + 1;
@@ -164,20 +178,12 @@ class App extends Component {
     this.setState({
       counter: counter,
       category: arr[counter].category,
+      type: arr[counter].type,
       question: arr[counter].question,
       answerOptions: arr[counter].answers,
       answer: '',
       questionNumero: arr[counter].numero,
     });
-  }
-
-
-  getResults() {
-    return this.state.answerOptions[this.getGoodAnswer(this.state.answerOptions)].content;
-  }
-
-  setResults(getResults) {
-    this.setState({ result: getResults });
   }
 
   renderListOfWin(key, index) {
@@ -201,11 +207,14 @@ class App extends Component {
       answer={this.state.answer}
       questionNumero={this.state.questionNumero}
       answerOptions={this.state.answerOptions}
+      type={this.state.type}
       category={this.state.category}
       question={this.state.question}
       questionTotal={quizQuestions.length}
       onAnswerSelected={this.handleAnswerSelected}
       onHandleClickNext={this.handleClickNext}
+      handleCorrection={this.handleCorrection}
+      handleAutoCorrection={this.handleAutoCorrection}
     />;
   }
 

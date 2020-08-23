@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
+
 function AnswerOption(props) {
   return (
     <li className={props.isQuestion === "false" ? (props.answerType === props.answer ? (props.answerType !== "Yes" ? "answerOption + No" : "answerOption Yes") : (props.answerType === "Yes" ? "answerOption + Yes" : "answerOption")) : "answerOption"}>
@@ -21,9 +22,11 @@ function AnswerOption(props) {
       </label>
     </li>
   );
+
 }
 
 AnswerOption.propTypes = {
+  type: PropTypes.string.isRequired,
   isQuestion: PropTypes.string.isRequired,
   answerType: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,

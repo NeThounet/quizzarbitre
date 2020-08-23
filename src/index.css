@@ -56,6 +56,21 @@ body {
   font-size: 14px;
 }
 
+.textOuvert {
+  padding: 1.5rem 2.5rem 1.5rem;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+.reponseOuvert{
+  padding-top: 1.5rem;
+  padding-left: 2.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+
 /* Question Component */
 .question {
   margin: 0;
@@ -257,6 +272,31 @@ body {
 
 .quizzSection{
   margin: 0 0;
+  width:57%;
+}
+
+.imgButton{
+  width:100%!important;
+  padding-left:auto!important;
+  padding-right:auto!important;
+}
+
+.buttonCorrection{
+  width: 100%;
+  padding-left:10%!important;
+  padding-right:10%!important;
+  padding-top:10%!important;
+  padding-bottom:10%!important;
+}
+
+.ButtonOuvert{
+  width:10%;
+  margin-left:3rem!important;
+  margin-right:3rem!important;
+  padding-left:0%!important;
+  padding-right:0%!important;
+  padding-top:0%!important;
+  padding-bottom:0%!important;
 }
 
 .emojiV{
