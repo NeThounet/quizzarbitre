@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "047e63beb8ef92ce3d55",
-    "url": "/quizzarbitre/static/css/main.2284a9e3.chunk.css"
+    "revision": "688214a8e9d1f1f93d3d",
+    "url": "/quizzarbitre/static/css/main.f5ec47e0.chunk.css"
   },
   {
-    "revision": "047e63beb8ef92ce3d55",
-    "url": "/quizzarbitre/static/js/main.047e63be.chunk.js"
+    "revision": "688214a8e9d1f1f93d3d",
+    "url": "/quizzarbitre/static/js/main.688214a8.chunk.js"
   },
   {
     "revision": "54bd077e21c3dc438339",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/quizzarbitre/static/media/icon-check.b4084e44.svg"
   },
   {
-    "revision": "b47d96ae2bdd898af91fbfb0c4142e4f",
+    "revision": "3dee0202657b2a337b86d712a1244e01",
     "url": "/quizzarbitre/index.html"
   }
 ];
